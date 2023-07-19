@@ -1,0 +1,931 @@
+*{
+	margin: 0;
+	padding: 0;
+	/* overflow-x: hidden; */
+}
+
+@font-face {
+  font-family: sattins;
+  src: url(sattins.ttf);
+}
+
+@font-face {
+  font-family: hunterland;
+  src: url(hunterland.ttf);
+}
+
+@font-face {
+  font-family: hunterland_italic;
+  src: url(hunteland_italic.ttf);
+}
+
+@font-face {
+  font-family: landera;
+  src: url(Landera.ttf);
+}
+
+@font-face {
+  font-family: landera_italic;
+  src: url(Landera_italic.ttf);
+}
+
+@font-face {
+  font-family: andalusia;
+  src: url(andalusia.ttf);
+}
+
+@font-face {
+  font-family: andalusia_italic;
+  src: url(andalusia_italic.ttf);
+}
+
+
+@font-face {
+  font-family: motherva;
+  src: url(Motherva.otf);
+}
+
+@font-face {
+  font-family: titillium;
+  src: url(titillium.otf);
+}
+
+@font-face {
+  font-family: allenia;
+  src: url(allenia.ttf);
+}
+
+body{
+	background-color: wheat;
+}
+
+h1{
+	font-family: sattins;
+	font-size: 50px;
+}
+
+.logodiv{
+	display: flex;
+	justify-content: center;
+}
+
+.logo{
+	position: relative;
+	height: 10em;
+	top: 1.7em;
+    filter: invert(1);
+}
+
+.navb{
+	background: none;
+	text-align: center;
+	margin-top: 50px;
+    margin-bottom: 3em;
+}
+
+.nava{
+	color: black;
+	text-decoration: none;
+	margin: 0.3px 0.7em;
+	display: inline-block;
+	font-size: 0.em;
+	font-weight: 400;
+	font-family: sans-serif;
+}
+
+.nava:hover{
+	color: rgb(38, 35, 35);
+}
+.mtg{
+	background-color: black;
+	height: 25em;
+	display: flex;
+	margin-top: 2em;
+	margin-bottom: 1.5em;
+	width: 100%;
+}
+
+.img1{
+	height: 26em;
+	margin-top: -3em;
+	margin-left: 2em;
+    /* -webkit-filter: drop-shadow(1px 1px 0 wheat)
+                    drop-shadow(-1px -1px 0 wheat);
+    filter: drop-shadow(6px 6px 0 wheat) 
+            drop-shadow(-6px -2px 0 wheat); */
+	/* transform: rotate(10deg); */
+}
+
+.mtg h2{
+	color: antiquewhite;
+	font-family: sattins;
+	position: relative;
+	top: 0.5em;
+	left: 2em;
+	font-weight: 200;
+	font-size: 10em;
+}
+
+.mtg hr{
+    top: 36em;
+    left: 49em;
+    width: 16em;
+    /* -webkit-transform: rotate(90deg); */
+    /* transform: rotate(0deg); */
+    position: absolute;
+}
+
+.mtg p{
+	color: antiquewhite;
+	font-family: sattins;
+	font-size: 3em;
+	font-weight: 200;
+	position: absolute;
+	top: 11.5em;
+	left: 22.6em;
+}
+
+#brands{
+	font-size: 2.5em;
+	/* margin-top: 10em; */
+	margin-left: 0.7em;
+	font-family: titillium;
+	font-weight: 600;
+}
+
+.container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 0.5em;
+}
+
+.container .card{
+	position: relative;
+	width: 22.5em;
+	height: 30em;
+	margin: 20px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.container .card span{
+	position: absolute;
+	display: block;
+	width: 0px;
+	height: 0px;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	opacity: 0.95;
+/*	background: #9C27b0;*/
+	background: #570033;
+	z-index: 1;
+	transition: width 0.5s, height 0.5s;
+}
+
+.container .card:hover span{
+	width: 1000px;
+	height: 1000px;
+}
+
+.container .card .imgBx{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.container .card .imgBx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.container .card .content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.container .card .content a{
+	font-size: 3em;
+    /* text-decoration: underline; */
+    border-bottom: 1.5px solid antiquewhite;
+	font-family: motherva;
+	/* font-weight: 600; */
+	color: antiquewhite;
+}
+
+.container .card .content p{
+	font-size: 18px;
+	font-family: allenia;
+	font-weight: 100;
+	color: antiquewhite;
+}
+
+.container .card .content div{
+	padding: 40px;
+	color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.2s;
+	transform: translateY(50px);
+}
+
+.container .card:hover .content div{
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.container .bname{
+	display: none;
+}
+
+.images{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+
+.achieve img{
+	margin-top: 10px;
+	width: 30%;
+	aspect-ratio: 3/2;
+	object-fit: contain;
+}
+
+#contact{
+	display: flex;
+	background-color: rgb(1, 1, 20);
+	width: 100%;
+}
+
+.add{
+	width: 30%;
+	margin: 150px 0px 20px 60px;
+	background-color: transparent;
+}
+
+.cnt{
+	color: antiquewhite;
+	font-family: sattins;
+	font-size: 5em;
+	display: block;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.addr{
+	color: antiquewhite;
+	font-family: titillium;
+	font-size: 1.5em;
+	display: block;
+	text-align: center;
+	margin-bottom: 50px;
+}   
+
+.addr iframe{
+	height: 15em;
+	width: 40em;
+	filter: invert(90%);
+}
+
+.form{
+	/* background-color: blue; */
+	margin-left: 400px;
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+.form form input{
+	background-color: transparent;
+	border: 1px solid antiquewhite;
+	color: antiquewhite;
+	height: 3em;
+	width: 60em;
+	padding: 10px;
+	font-family: titillium;
+	font-size: 15px;
+	margin-bottom: 1.5em;
+}
+
+::placeholder{
+	color: antiquewhite;
+	font-family: titillium;
+}
+
+::placeholder:focus{
+	border: 2px solid antiquewhite;
+}
+
+.form form textarea{
+	height: 12em;
+	width: 60em;
+	background-color: transparent;
+	color: antiquewhite;
+	border: 1px solid antiquewhite;
+	padding: 10px;
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+
+
+/* button{
+	color: antiquewhite;
+	font-family: titillium;
+	font-size: 15px;
+	background-color: transparent;
+	border: 1px solid antiquewhite;
+	height: 50px;
+	width: 300px;
+	padding: 50px;
+	position: relative;
+	left: 40%;
+	margin-top: 20px;
+	cursor: pointer;
+	
+	text-align: center;
+} */
+
+.btn41-43 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	background: transparent;
+	outline: none !important;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	border: 1px solid antiquewhite;
+	/* left: 40px; */
+	margin-left: 42%;
+}
+  
+.btn-41 {
+	border: 1px solid antiquewhite;
+	z-index: 1;
+	color: white;
+	/* height: 20px; */
+	padding: 20px;
+	/* width: 100px; */
+	font-size: 1.2em;
+	/* margin-top: 20px; */
+	font-family: titillium;
+}
+  
+.btn-41:after {
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	direction: rtl;
+	z-index: -1;
+	background: rgb(255, 255, 255);
+	transition: all 0.3s ease;
+}
+  
+.btn-41:hover {
+	color: rgb(0, 0, 0);
+}
+  
+.btn-41:hover:after {
+	left: auto;
+	right: 0;
+	width: 100%;
+ }
+  
+.btn-41:active {
+	top: 2px;
+}
+
+.form2{
+	display: none;
+}
+
+
+
+/* #map iframe{
+	width: 100%;
+	margin: 20px 0px;
+
+} */
+
+/* and (max-width: 2500px) */
+
+@media (max-width:2000px) {
+	.container .card{
+		position: relative;
+		width: 20em;
+		height: 25em;
+		margin: 10px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	.form{
+		/* background-color: blue; */
+		margin-left: 200px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.addr iframe{
+		height: 8em;
+		width: 25em;
+		filter: invert(90%);
+	}
+}
+
+@media (min-width:1481px) and (max-width: 1999px){
+	.container .card{
+		position: relative;
+		width: 15.5em;
+		height: 25em;
+		margin: 10px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	.form{
+		/* background-color: blue; */
+		margin-left: 200px;
+		margin-top: 130px;
+		margin-bottom: 50px;
+	}
+
+	.form form input{
+		width: 50em;
+	}
+
+	.form form textarea{
+		width: 50em;
+	}
+
+	.addr iframe{
+		height: 8em;
+		width: 20em;
+		filter: invert(90%);
+	}
+}
+
+@media (min-width:1461px) and (max-width: 1481px){
+	.container .card{
+		position: relative;
+		width: 15.5em;
+		height: 25em;
+		margin: 10px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	.form{
+		/* background-color: blue; */
+		margin-left: 200px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.addr iframe{
+		height: 8em;
+		width: 25em;
+		filter: invert(90%);
+	}
+}
+
+@media (min-width:1300px) and (max-width: 1480px){
+	.container .card{
+		position: relative;
+		width: 12.5em;
+		height: 25em;
+		margin: 10px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	.form{
+		/* background-color: blue; */
+		margin-left: 200px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.addr iframe{
+		height: 8em;
+		width: 23em;
+		filter: invert(90%);
+	}
+
+	.mtg h2{
+		color: antiquewhite;
+		font-family: sattins;
+		position: relative;
+		top: 0.5em;
+		left: 0.4em;
+		font-weight: 200;
+		font-size: 10em;
+	}
+	
+	.mtg hr{
+		top: 36em;
+		left: 33em;
+		width: 17em;
+		/* -webkit-transform: rotate(90deg); */
+		/* transform: rotate(0deg); */
+		position: absolute;
+	}
+	
+	.mtg p{
+		color: antiquewhite;
+		font-family: sattins;
+		font-size: 3em;
+		font-weight: 200;
+		position: absolute;
+		top: 11.5em;
+		left: 17.6em;
+	}
+
+	.form form input{
+		background-color: transparent;
+		border: 1px solid antiquewhite;
+		color: antiquewhite;
+		height: 3em;
+		width: 40em;
+		padding: 10px;
+		font-family: titillium;
+		font-size: 15px;
+		margin-bottom: 1.5em;
+	}
+
+	.form form textarea{
+		height: 12em;
+		width: 40em;
+		background-color: transparent;
+		color: antiquewhite;
+		border: 1px solid antiquewhite;
+		padding: 10px;
+		font-size: 15px;
+		margin-bottom: 20px;
+	}
+	
+}
+
+@media (min-width:1210px) and (max-width: 1299px){
+	.container .card{
+		position: relative;
+		width: 12.5em;
+		height: 25em;
+		margin: 10px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	.form{
+		/* background-color: blue; */
+		margin-left: 200px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.addr iframe{
+		height: 8em;
+		width: 15em;
+		filter: invert(90%);
+	}
+
+	.mtg h2{
+		color: antiquewhite;
+		font-family: sattins;
+		position: relative;
+		top: 0.5em;
+		left: 0.4em;
+		font-weight: 200;
+		font-size: 10em;
+	}
+	
+	.mtg hr{
+		top: 36em;
+		left: 33em;
+		width: 17em;
+		/* -webkit-transform: rotate(90deg); */
+		/* transform: rotate(0deg); */
+		position: absolute;
+	}
+	
+	.mtg p{
+		color: antiquewhite;
+		font-family: sattins;
+		font-size: 3em;
+		font-weight: 200;
+		position: absolute;
+		top: 11.5em;
+		left: 17.6em;
+	}
+
+	.form form input{
+		background-color: transparent;
+		border: 1px solid antiquewhite;
+		color: antiquewhite;
+		height: 3em;
+		width: 30em;
+		padding: 10px;
+		font-family: titillium;
+		font-size: 15px;
+		margin-bottom: 1.5em;
+	}
+
+	.form form textarea{
+		height: 12em;
+		width: 30em;
+		background-color: transparent;
+		color: antiquewhite;
+		border: 1px solid antiquewhite;
+		padding: 10px;
+		font-size: 15px;
+		margin-bottom: 20px;
+	}
+	
+}
+
+@media (min-width:750px) and (max-width: 1209px){
+
+	.navb{
+		display: none;
+	}
+
+	.mtg .img1{
+		display: none;
+	}
+
+	.mtg h2{
+		font-size: 9em;
+		text-align: center;
+		left: 0.7em;
+	}
+
+	.mtg p{
+		text-align: center;
+		left: 7em;
+		top: 10em;
+	}
+
+	.mtg hr{
+		width: 12em;
+		left: 7em;
+		top: 31.5em;
+	}
+
+	#brands{
+		margin-left: 1em;
+	}
+
+	.container .card{
+		width: 90%;
+		height: 40em;
+	}
+
+	.container .card span{
+		background: transparent;
+	}
+
+	.container .bname{
+		display: inline-block;
+		font-size: 3em;
+		text-decoration: underline;
+		margin-bottom: 20px;
+	}
+
+	#contact .add{
+		width: 90%;
+		display: block;
+	}
+
+	#contact .add .addr iframe{
+		width: 95%;
+
+	}
+
+	#contact .form{
+		display: none;
+
+	}
+
+	.form2{
+		display: block;
+		background-color: rgb(1, 1, 20);
+		margin-top: 0;
+		margin-left: 0;
+		height: 50em;
+	}
+
+	.form2 form{
+		margin-left: 30px;
+	}
+
+	.form2 form input{
+		width: 95%;
+	}
+
+	.form2 form textarea{
+		width: 95%;
+	}
+}
+
+@media (min-width:360px) and (max-width: 749px){
+
+	.navb{
+		display: none;
+	}
+
+	.mtg .img1{
+		display: none;
+	}
+
+	.mtg h2{
+		font-size: 5em;
+		text-align: center;
+		margin: 0 auto;
+		left: 0em;
+	}
+
+	.mtg p{
+		text-align: center;
+		left: 2em;
+		top: 11em;
+		font-size: 2.2em;
+		/* margin: 0 auto; */
+	}
+
+	.mtg hr{
+		width: 6em;
+		left: 7em;
+		top: 26.5em;
+		display: none;
+	}
+
+	#brands{
+		margin-left: 1em;
+	}
+
+	.container .card{
+		width: 90%;
+		height: 40em;
+	}
+
+	.container .card span{
+		background: transparent;
+	}
+
+	.container .bname{
+		display: inline-block;
+		font-size: 3em;
+		text-decoration: underline;
+		margin-bottom: 20px;
+	}
+
+	#contact .add{
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	#contact .add .addr iframe{
+		width: 12em;
+
+	}
+
+	#contact .form{
+		display: none;
+
+	}
+
+	.form2{
+		display: block;
+		background-color: rgb(1, 1, 20);
+		margin-top: 0;
+		margin-left: 0;
+		height: 50em;
+	}
+
+	.form2 form{
+		margin-left: 15px;
+	}
+
+	.form2 form input{
+		width: 20em;
+	}
+
+	.form2 form textarea{
+		width: 20em;
+	}
+}
+
+@media (max-width: 359px){
+	.navb{
+		display: none;
+	}
+
+	.mtg .img1{
+		display: none;
+	}
+
+	.mtg h2{
+		font-size: 5em;
+		text-align: center;
+		margin: 0 auto;
+		left: 0em;
+	}
+
+	.mtg p{
+		text-align: center;
+		left: 1em;
+		top: 14em;
+		font-size: 2.2em;
+		/* margin: 0 auto; */
+	}
+
+	.mtg hr{
+		width: 6em;
+		left: 7em;
+		top: 26.5em;
+		display: none;
+	}
+
+	#brands{
+		margin-left: 1em;
+	}
+
+	.container .card{
+		width: 90%;
+		height: 40em;
+	}
+
+	.container .card span{
+		background: transparent;
+	}
+
+	.container .bname{
+		display: inline-block;
+		font-size: 3em;
+		text-decoration: underline;
+		margin-bottom: 20px;
+	}
+
+	#contact .add{
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	#contact .add .addr iframe{
+		width: 12em;
+
+	}
+
+	#contact .form{
+		display: none;
+
+	}
+
+	.form2{
+		display: block;
+		background-color: rgb(1, 1, 20);
+		margin-top: 0;
+		margin-left: 0;
+		height: 50em;
+	}
+
+	.form2 form{
+		margin-left: 15px;
+	}
+
+	.form2 form input{
+		width: 18em;
+	}
+
+	.form2 form textarea{
+		width: 18em;
+	}
+
+}
+
+
+
